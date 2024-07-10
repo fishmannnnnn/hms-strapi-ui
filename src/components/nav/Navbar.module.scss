@@ -1,0 +1,38 @@
+@import '@/styles/vars.scss';
+.nav{
+    width: 100%;
+    background: $gray;
+    border-radius: 20px;
+    padding: 25px;
+}
+.navContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navContacts{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+.navEmail, .navPhone{
+    color: $black;
+    font-weight: 500;
+}
+.navContainerRight{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.imgLogo{
+    margin-left: 20px;
+}
+.links{
+    margin-top: 12px;
+    padding: 8px 20px;
+    width: 100%;
+    border-radius: 100px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+}
