@@ -1,0 +1,23 @@
+@import '@/styles/vars.scss';
+.button {
+    cursor: pointer;
+	background: white;
+	border: 1.5px solid $darkblue;
+	border-radius: 100px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	padding: 8px 20px;
+    font-weight: 700;
+    transition: all .4s ease-in-out;
+    &:hover{
+        background: $red;
+        border: 1.5px solid transparent;
+        .buttonText{
+            color: white;
+        }
+        svg path{
+            fill: white;
+        }
+    }
+}

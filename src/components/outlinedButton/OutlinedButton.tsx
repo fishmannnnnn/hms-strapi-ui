@@ -1,6 +1,6 @@
-import styles from './TextButton.module.scss';
-const TextButton = ({ text }: {text: string}) => {
-	return (
+import styles from './OutlinedButton.module.scss';
+const OutlinedButton = ({text}:{text: string}) => {
+  return (
 		<button className={styles.button}>
 			<div className={styles.buttonText}>{text}</div>
 			<svg
@@ -15,7 +15,6 @@ const TextButton = ({ text }: {text: string}) => {
 				/>
 			</svg>
 		</button>
-	);
-};
-
-export default TextButton;
+  );
+}
+export default OutlinedButton
