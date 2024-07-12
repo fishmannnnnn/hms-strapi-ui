@@ -82,6 +82,7 @@
 	border: 1.5px solid $darkblue;
 	border-radius: 200px;
 	cursor: pointer;
+	display: none;
 }
 .imgLogo {
 	margin-left: 20px;
@@ -109,6 +110,7 @@
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
+	display: none;
 }
 
 @media (max-width: 868px) {
@@ -131,6 +133,9 @@
 	.menuButton {
 		display: flex;
 		cursor: pointer;
+	}
+	.closeMenuButton{
+		display: grid;
 	}
 	.links {
 		display: none;
@@ -162,5 +167,14 @@
 	}
 	.navPhone {
 		margin-top: 15px;
+	}
+	.linksMobileContainer {
+		position: sticky;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	.navFooter{
+		display: flex;
 	}
 }

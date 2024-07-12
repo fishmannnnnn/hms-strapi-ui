@@ -1,17 +1,28 @@
 'use client';
 import styles from './Navbar.module.scss';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MouseEventHandler, useState } from 'react';
+import { motion } from 'framer-motion';
+import { MouseEventHandler, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NAV_LINKS } from '@/constants';
 import TextButton from '@/components/textButton/TextButton';
 import OutlinedButton from '@/components/outlinedButton/OutlinedButton';
 import { LanguageSwitch } from '@/components/languageSwitch/LanguageSwitch';
+
+const variants = {
+	hidden: { y: '-100%', opacity: 0 },
+	visible: { y: 0, opacity: 1 },
+	exit: { y: '-100%', opacity: 0 },
+};
+
 const Nav = () => {
 	const [showMenu, setShowMenu] = useState(false);
+	const navEl = useRef(null);
 	const openMenu: MouseEventHandler<HTMLDivElement> = () => {
 		setShowMenu(true);
+		// if(navEl.current !== null){
+		// 	(navEl.current as HTMLElement).style.height = '0px';
+		// }
 	};
 	const closeMenu: MouseEventHandler<HTMLDivElement> = () => {
 		setShowMenu(false);
@@ -49,9 +60,9 @@ const Nav = () => {
 							<path
 								d='M13.2499 10.075V11.95C13.2506 12.1241 13.2149 12.2964 13.1452 12.4558C13.0755 12.6153 12.9732 12.7585 12.8449 12.8762C12.7167 12.9938 12.5653 13.0834 12.4004 13.1392C12.2355 13.195 12.0608 13.2157 11.8874 13.2C9.96422 12.9908 8.11688 12.3336 6.49365 11.2812C4.98354 10.3217 3.70323 9.04136 2.74365 7.53125C1.6876 5.90065 1.03028 4.04432 0.824897 2.1125C0.809279 1.93967 0.829819 1.76547 0.88521 1.60101C0.940601 1.43655 1.02963 1.28543 1.14663 1.15726C1.26362 1.0291 1.40603 0.926693 1.56477 0.856576C1.72351 0.786459 1.89511 0.750163 2.06865 0.75H3.94365C4.24696 0.747014 4.54102 0.854424 4.771 1.05221C5.00098 1.24999 5.1512 1.52465 5.19365 1.825C5.27258 2.42508 5.41935 3.01427 5.63115 3.58125C5.71524 3.80495 5.73344 4.04807 5.68359 4.2818C5.63374 4.51553 5.51794 4.73007 5.3499 4.9L4.55615 5.69375C5.44587 7.25847 6.74143 8.55403 8.30615 9.44375L9.0999 8.65C9.26983 8.48196 9.48437 8.36616 9.7181 8.31631C9.95183 8.26646 10.1949 8.28466 10.4186 8.36875C10.9856 8.58055 11.5748 8.72732 12.1749 8.80625C12.4785 8.84908 12.7558 9.002 12.954 9.23593C13.1522 9.46986 13.2575 9.76848 13.2499 10.075Z'
 								stroke='white'
-								stroke-width='1.5'
-								stroke-linecap='round'
-								stroke-linejoin='round'
+								strokeWidth='1.5'
+								strokeLinecap='round'
+								strokeLinejoin='round'
 							/>
 						</svg>
 					</div>
@@ -64,13 +75,13 @@ const Nav = () => {
 						onClick={!showMenu ? openMenu : closeMenu}>
 						{!showMenu ? (
 							<>
-									<motion.span
-										initial={{ opacity: 0 }}
-										animate={{ opacity: 1 }}
-										exit={{ opacity: 0 }}
-										transition={{ delay: 0.2 }}>
-										Меню
-									</motion.span>
+								<motion.span
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									exit={{ opacity: 0 }}
+									transition={{ delay: 0.2 }}>
+									Меню
+								</motion.span>
 
 								<svg
 									width='11'
@@ -79,11 +90,11 @@ const Nav = () => {
 									fill='none'
 									xmlns='http://www.w3.org/2000/svg'>
 									<path
-										d='M1 2.16666H10.0001M1 6H10.0001M1 9.83333H10.0001'
 										stroke='#B72743'
-										stroke-width='2'
-										stroke-linecap='round'
-										stroke-linejoin='round'
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										strokeWidth='2'
+										d='M1 2.167h9M1 6h9M1 9.833h9'
 									/>
 								</svg>
 							</>
@@ -95,11 +106,11 @@ const Nav = () => {
 								fill='none'
 								xmlns='http://www.w3.org/2000/svg'>
 								<path
-									d='M1.5 2L13.5 14M1.5 14L13.5 2'
 									stroke='#B72743'
-									stroke-width='2'
-									stroke-linecap='round'
-									stroke-linejoin='round'
+									strokeLinecap='round'
+									strokeLinejoin='round'
+									strokeWidth='2'
+									d='m1.5 2 12 12m-12 0 12-12'
 								/>
 							</svg>
 						)}
@@ -116,7 +127,13 @@ const Nav = () => {
 				))}
 			</ul>
 			{showMenu ? (
-				<>
+				<motion.div
+					className={styles.linksMobileContainer}
+					initial='hidden'
+					animate='visible'
+					exit='exit'
+					variants={variants}
+					transition={{ duration: 0.3 }}>
 					<ul className={styles.linksMobile}>
 						{NAV_LINKS.map((link) => (
 							<li key={link.key}>
@@ -152,7 +169,7 @@ const Nav = () => {
 							<LanguageSwitch langs={['RU', 'EN']} />
 						</div>
 					</div>
-				</>
+				</motion.div>
 			) : (
 				<></>
 			)}
