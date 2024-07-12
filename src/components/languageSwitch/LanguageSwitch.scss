@@ -1,0 +1,39 @@
+@import '@/styles/vars.scss';
+[data-scope='switch'][data-part='root'] {
+	position: relative;
+}
+[data-scope='switch'][data-part='control'] {
+	display: block;
+	width: 75px;
+	height: 38px;
+	border-radius: 100px;
+	padding: 3px;
+	transition: background 0.3s ease-out;
+	background: $darkblue;
+}
+[data-scope='switch'][data-part='thumb']{
+	display: block;
+	width: 32px;
+	height: 32px;
+	border-radius: 200px;
+	background: white;
+	transition: all .3s ease-in-out;
+}
+[data-scope='switch'][data-part='thumb'][data-state='checked']{
+	display: block;
+	transform: translateX(37px);
+}
+.labels{
+	position: absolute;
+	top: 8px;
+	left: 8.5px;
+	font-weight: 700;
+	display: flex;
+	gap: 16.5px;
+	color: white;
+}
+[data-scope='switch'][data-part='label'][data-state='unchecked']:first-of-type,
+[data-scope='switch'][data-part='label'][data-state='checked']:last-of-type {
+	color: $red;
+	transition: color .3s ease-in-out;
+}

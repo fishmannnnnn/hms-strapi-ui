@@ -3,15 +3,23 @@
     border: none;
     display: flex;
     gap: 10px;
-    align-items: center;
     font-weight: 700;
+    text-align: left;
+    // align-items: baseline;
     cursor: pointer;
     svg{
         visibility: hidden;
         transition: visibility .1s ease-out;
+        flex-shrink: 0;
+        margin-top: 6px;
     }
     &:hover svg{
         visibility: visible;
         transition: visibility .3s ease-in;
+    }
+}
+.buttonText{
+    @media (max-width:892px){
+        width: min-content;
     }
 }

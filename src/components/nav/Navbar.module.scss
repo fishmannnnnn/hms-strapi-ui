@@ -1,38 +1,166 @@
 @import '@/styles/vars.scss';
-.nav{
-    width: 100%;
-    background: $gray;
-    border-radius: 20px;
-    padding: 25px;
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 1160px;
+	margin: 0 auto;
+	background: $gray;
+	border-radius: 20px;
+	padding: 25px;
 }
-.navContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
-.navContacts{
-    display: flex;
-    align-items: center;
-    gap: 35px;
+.navContacts {
+	display: flex;
+	align-items: center;
+	gap: 35px;
 }
-.navEmail, .navPhone{
-    color: $black;
-    font-weight: 500;
+.navEmail,
+.navPhone {
+	color: $black;
+	font-weight: 500;
+	position: relative;
+	cursor: pointer;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 0%;
+		height: 2px;
+		background: $black;
+	}
+	&:hover::after {
+		width: 100%;
+		transition: width 0.5s ease-in-out;
+	}
 }
-.navContainerRight{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.navSwitch {
+	cursor: pointer;
 }
-.imgLogo{
-    margin-left: 20px;
+.navContainerRight {
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
-.links{
-    margin-top: 12px;
-    padding: 8px 20px;
-    width: 100%;
-    border-radius: 100px;
-    background: white;
-    display: flex;
-    justify-content: space-between;
+.phoneIcon {
+	width: 38px;
+	height: 38px;
+	background: $red;
+	border-radius: 200px;
+	display: grid;
+	place-content: center;
+	display: none;
+}
+.menuButton {
+	padding: 8px 20px;
+	display: flex;
+	width: 103px;
+	align-items: center;
+	border: 1.5px solid $darkblue;
+	transition: width 0.3s ease-in-out;
+	border-radius: 200px;
+	gap: 5px;
+	font-weight: 700;
+	svg {
+		flex-shrink: 0;
+	}
+	overflow: hidden;
+	display: none;
+}
+.closeMenuButton {
+	width: 55px;
+	transition: width 0.3s ease-in-out;
+	height: 38px;
+	display: grid;
+	place-items: center;
+	border: 1.5px solid $darkblue;
+	border-radius: 200px;
+	cursor: pointer;
+}
+.imgLogo {
+	margin-left: 20px;
+}
+.links {
+	margin-top: 12px;
+	padding: 8px 20px;
+	width: 100%;
+	border-radius: 100px;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+}
+.linksMobile {
+	display: none;
+}
+.mobileLink {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navFooter {
+	margin-top: 30px;
+	padding: 0 20px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+@media (max-width: 868px) {
+	.nav {
+		padding: 15px 5px 25px;
+	}
+	.navContacts {
+		display: none;
+	}
+	.contactButton {
+		display: none;
+	}
+	.navContainerRight {
+		gap: 5px;
+	}
+	.phoneIcon {
+		display: grid;
+		cursor: pointer;
+	}
+	.menuButton {
+		display: flex;
+		cursor: pointer;
+	}
+	.links {
+		display: none;
+	}
+	.linksMobile {
+		margin-top: 15px;
+		padding: 30px 20px;
+		border-radius: 30px;
+		background-color: $darkblue;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		color: white;
+	}
+	.navEmail,
+	.navPhone {
+		position: static;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			width: 0;
+			height: 0;
+		}
+		&:hover::after {
+			width: 0;
+		}
+	}
+	.navPhone {
+		margin-top: 15px;
+	}
 }
