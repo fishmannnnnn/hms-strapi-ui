@@ -5,9 +5,9 @@ import { MouseEventHandler, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NAV_LINKS } from '@/constants';
-import TextButton from '../textButton/TextButton';
-import OutlinedButton from '../outlinedButton/OutlinedButton';
-import { LanguageSwitch } from '../languageSwitch/LanguageSwitch';
+import TextButton from '@/components/textButton/TextButton';
+import OutlinedButton from '@/components/outlinedButton/OutlinedButton';
+import { LanguageSwitch } from '@/components/languageSwitch/LanguageSwitch';
 const Nav = () => {
 	const [showMenu, setShowMenu] = useState(false);
 	const openMenu: MouseEventHandler<HTMLDivElement> = () => {
