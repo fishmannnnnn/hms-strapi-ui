@@ -17,7 +17,9 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={manrope.className}>
-				<Navbar/>
+				<div className='navWrapper'>
+					<Navbar />
+				</div>
 				{children}
 			</body>
 		</html>

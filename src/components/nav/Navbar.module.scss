@@ -1,19 +1,25 @@
 @import '@/styles/vars.scss';
 .nav {
 	position: absolute;
-	top: 0;
+	top: 20px;
 	left: 0;
-	width: 100%;
+	right: 0;
+	width: calc(100% - 10px);
 	max-width: 1160px;
 	margin: 0 auto;
 	background: $gray;
 	border-radius: 20px;
 	padding: 25px;
+	@media(max-width: 868px){
+		top: 5px;
+	}
 }
 .navContainer {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: relative;
+	z-index: 10;
 }
 .navContacts {
 	display: flex;
@@ -168,8 +174,12 @@
 	.navPhone {
 		margin-top: 15px;
 	}
+	.navMobileWrapper{
+		position: relative;
+		z-index: 2;
+	}
 	.linksMobileContainer {
-		position: sticky;
+		// position: sticky;
 		top: 0;
 		left: 0;
 		width: 100%;
