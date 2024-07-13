@@ -1,3 +1,90 @@
-.container{
-    margin-top: 70px;
+@import '@/styles/vars.scss';
+.container {
+	margin-top: 70px;
+	@media (max-width: 1160px) {
+		margin-top: 50px;
+	}
+}
+.containerTop {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 66px;
+    font-size: 54px;
+    font-weight: 800;
+	p {
+		span {
+			color: $skyblue;
+		}
+	}
+	@media (max-width: 1160px) {
+		padding: 0 25px 0 45px;
+		gap: 15px;
+        font-size: 44px;
+	}
+	@media (max-width: 1086px) {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	@media (max-width: 868px) {
+		font-size: 34px;
+		padding: 0 10px 0 25px;
+
+	}
+	@media (max-width: 645px) {
+		font-size: 34px;
+	}
+}
+.containerTopRight {
+	p {
+		line-height: 150%;
+		min-width: 360px;
+		font-size: 20px;
+		font-weight: 500;
+		color: $darkgray;
+		margin-bottom: 70px;
+		@media (max-width: 1160px) {
+			margin-bottom: 30px;
+		}
+        @media (max-width: 1086px) {
+		min-width: auto;
+	}
+	}
+}
+.containerBottom{
+    margin-top: 50px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.block{
+    height: 250px;
+    border-radius: 30px;
+    position: relative;
+}
+.blockIcon{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 200px;
+}
+#planeBlock{
+    background: $skyblue;
+}
+#circleWhite{
+    background: white;
+}
+#truckBlock{
+    background: $darkblue;
+}
+#circleBlue{
+    background: $skyblue;
+}
+#accessibilityBlock{
+    background: $gray;
+}
+#circleRed{
+    background: $red;
 }
