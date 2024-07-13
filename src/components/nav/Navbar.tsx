@@ -1,7 +1,7 @@
 'use client';
 import styles from './Navbar.module.scss';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MouseEventHandler, useRef, useState } from 'react';
+import { MouseEventHandler, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NAV_LINKS } from '@/constants';
