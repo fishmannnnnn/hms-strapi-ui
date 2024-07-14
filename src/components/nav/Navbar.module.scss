@@ -1,6 +1,7 @@
 @import '@/styles/vars.scss';
 .nav {
 	position: absolute;
+	z-index: 1;
 	top: 20px;
 	left: 0;
 	right: 0;
@@ -12,14 +13,14 @@
 	padding: 25px;
 	@media(max-width: 868px){
 		top: 5px;
+		border-radius: 30px;
 	}
 }
 .navContainer {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	position: relative;
-	z-index: 10;
+	// position: relative;
 }
 .navContacts {
 	display: flex;
@@ -173,10 +174,10 @@
 	}
 	.navMobileWrapper{
 		position: relative;
-		z-index: 2;
+		z-index: 12;
 	}
 	.linksMobileContainer {
-		// position: sticky;
+		position: relative;
 		top: 0;
 		left: 0;
 		width: 100%;
