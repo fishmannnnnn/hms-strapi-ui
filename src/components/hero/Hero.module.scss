@@ -1,41 +1,18 @@
 @import '@/styles/vars.scss';
 .container {
 	margin-top: 70px;
-	@media (max-width: 1160px) {
-		margin-top: 50px;
-	}
 }
 .containerTop {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 66px;
-    font-size: 54px;
-    font-weight: 800;
+	font-size: 54px;
+	font-weight: 800;
 	p {
 		span {
 			color: $skyblue;
 		}
-	}
-	@media (max-width: 1160px) {
-		padding: 0 25px 0 45px;
-		gap: 15px;
-        font-size: 44px;
-	}
-	@media (max-width: 1086px) {
-		align-items: flex-start;
-		flex-direction: column;
-	}
-	@media (max-width: 868px) {
-		font-size: 34px;
-		padding: 0 10px 0 25px;
-
-	}
-	@media (max-width: 645px) {
-		font-size: 34px;
-	}
-	@media (max-width: 425px) {
-		font-size: 24px;
 	}
 }
 .containerTopRight {
@@ -46,54 +23,53 @@
 		font-weight: 500;
 		color: $darkgray;
 		margin-bottom: 70px;
-		@media (max-width: 1160px) {
-			margin-bottom: 30px;
-		}
-        @media (max-width: 1086px) {
-		min-width: auto;
-	}
 	}
 }
-.containerBottom{
-    margin-top: 50px;
-    display: grid;
-    gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr;
+.containerBottom {
+	margin-top: 50px;
+	display: grid;
+	gap: 5px;
+	grid-template-columns: 1fr 1fr 1fr;
 }
-.block{
-    height: 250px;
-    border-radius: 30px;
-    position: relative;
+.block {
+	height: 250px;
+	border-radius: 30px;
+	position: relative;
 	color: white;
 	padding: 25px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	overflow: hidden;
-	p{
+	p {
 		margin-top: 10px;
+		font-size: 16px;
 	}
 }
-.blockIcon{
-    width: 50px;
-    height: 50px;
-    border-radius: 200px;
-    display: grid;
-    place-content: center;
+.blockTitle{
+	line-height: 120%;
+	font-size: 20px;
 }
-#circleWhite{
-    background: white;
+.blockIcon {
+	width: 50px;
+	height: 50px;
+	border-radius: 200px;
+	display: grid;
+	place-content: center;
 }
-#circleBlue{
-    background: $skyblue;
+#circleWhite {
+	background: white;
 }
-#circleRed{
+#circleBlue {
+	background: $skyblue;
+}
+#circleRed {
 	background: $red;
 }
-#accessibilityBlock{
+#accessibilityBlock {
 	color: $black;
 }
-.blockBg{
+.blockBg {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -101,4 +77,52 @@
 	height: 100%;
 	z-index: -1;
 	object-fit: cover;
+}
+@media (max-width: 1160px) {
+	.container {
+		margin-top: 50px;
+	}
+	.containerTop {
+		padding: 0 25px 0 45px;
+		gap: 15px;
+		font-size: 44px;
+	}
+	.containerTopRight p {
+		margin-bottom: 30px;
+	}
+}
+@media (max-width: 1086px) {
+	.containerTop {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	.containerTopRight p {
+		min-width: auto;
+	}
+}
+@media (max-width: 868px) {
+	.containerTop {
+		font-size: 34px;
+		padding: 0 10px 0 25px;
+	}
+	.containerBottom{
+		grid-template-columns: none;
+		grid-template-rows: 250px 250px 250px;
+	}
+}
+@media (max-width: 645px) {
+	.containerTop {
+		font-size: 34px;
+	}
+}
+@media (max-width: 425px) {
+	.containerTop {
+		font-size: 24px;
+	}
+	.blockTitle{
+		font-size: 16px;
+	}
+	.block p{
+		font-size: 14px;
+	}
 }
