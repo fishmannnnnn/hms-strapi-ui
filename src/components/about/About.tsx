@@ -28,7 +28,7 @@ const About = () => {
 			</div>
 			<div className={styles.containerBottom}>
 				<div className={styles.pill} id={styles.pill1}>
-					<div>Выставки в РФ</div>
+					Выставки в РФ
 				</div>
 				<div className={styles.pill} id={styles.pill2}>
 					Выставки зарубежом
