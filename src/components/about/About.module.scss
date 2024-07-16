@@ -1,0 +1,172 @@
+@import '@/styles/vars';
+.container {
+	margin-top: 150px;
+}
+.containerTop {
+	display: grid;
+	grid-template-columns: 1fr 460px;
+	grid-template-rows: 1fr auto;
+	align-items: end;
+	gap: 0 40px;
+	h3 {
+		font-size: 48px;
+		font-weight: 800;
+		line-height: 120%;
+		padding-bottom: 35px;
+		span {
+			color: $skyblue;
+		}
+	}
+	p {
+		grid-column: 1;
+		color: $darkgray;
+		line-height: 150%;
+		font-weight: 500;
+		font-size: 20px;
+		&:first-of-type {
+			padding-bottom: 15px;
+		}
+	}
+}
+.img {
+	grid-column-start: 2;
+	max-width: 460px;
+	grid-row: 1/3;
+	@media (max-width: 500px) {
+		width: 100%;
+		height: auto;
+	}
+}
+.containerBottom {
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	align-items: center;
+        justify-content: flex-start;
+}
+.pill {
+	flex: 1 1;
+	border-radius: 30px;
+	background: $gray;
+	color: $black;
+	line-height: 150%;
+	font-weight: 500;
+	display: flex;
+    justify-content: space-around;
+	white-space: nowrap;
+	cursor: pointer;
+	&:hover {
+		background: #e9e9e9;
+		transition: background 0.3s ease-in;
+	}
+    div{
+        width: fit-content;
+    }
+}
+#pill1 {
+	padding: 15px 25px;
+}
+#pill2 {
+	padding: 15px 10px;
+}
+#pill3 {
+	padding: 15px 25px;
+}
+#pill4 {
+	padding: 15px 10px;
+}
+#pill5 {
+	padding: 15px 10px;
+}
+@media (max-width: 1160px) {
+	.containerTop {
+		padding-right: 25px;
+	}
+	.containerTop h3,
+	.containerTop p {
+		padding-left: 45px;
+	}
+	.containerBottom {
+		padding: 0 25px 0 45px;
+	}
+}
+@media (max-width: 1086px) {
+	.containerTop {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		h3 {
+			font-size: 40px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+	.img {
+		margin-bottom: 35px;
+		align-self: center;
+	}
+}
+@media (max-width: 868px) {
+	.containerTop h3 {
+		padding-left: 25px;
+		font-size: 32px;
+	}
+	.containerTop p {
+		padding-left: 25px;
+	}
+	.containerBottom {
+        padding: 0 25px;
+	}
+    .pill{
+        flex: 0 0;
+    }
+    #pill1,
+	#pill2,
+	#pill3,
+	#pill4,
+	#pill5 {
+		padding: 15px 10px;
+	}
+}
+@media (max-width: 600px) {
+	.container {
+		margin-top: 100px;
+	}
+	.containerTop {
+		padding: 0;
+		h3 {
+			font-size: 25px;
+		}
+	}
+	.img {
+		margin-bottom: 30px;
+	}
+    #pill1,
+	#pill2,
+	#pill3,
+	#pill4,
+	#pill5 {
+		padding: 10px 10px;
+	}
+}
+@media (max-width: 425px) {
+	.containerTop h3 {
+		font-size: 20px;
+		padding-bottom: 30px;
+	}
+	.containerTop p {
+		font-size: 14px;
+	}
+	.pill {
+		font-size: 14px;
+	}
+	#pill1,
+	#pill2,
+	#pill3,
+	#pill4,
+	#pill5 {
+		padding: 5px 10px;
+	}
+}
