@@ -5,10 +5,10 @@ const Hero = () => {
 	return (
 		<section className={styles.container}>
 			<div className={styles.containerTop}>
-				<p>
+				<h1>
 					<span>Выставочная логистика с ХМС Экспо</span>: Премиальный
 					Сервис для Вашего Успеха
-				</p>
+				</h1>
 				<div className={styles.containerTopRight}>
 					<p>
 						Доставим ваш груз в любую точку мира на любое

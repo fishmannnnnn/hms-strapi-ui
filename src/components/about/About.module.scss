@@ -8,7 +8,7 @@
 	grid-template-rows: 1fr auto;
 	align-items: end;
 	gap: 0 40px;
-	h3 {
+	h2 {
         letter-spacing: -.5px;
 		font-size: 48px;
 		font-weight: 800;
@@ -81,7 +81,7 @@
 	.containerTop {
 		padding-right: 25px;
 	}
-	.containerTop h3,
+	.containerTop h2,
 	.containerTop p {
 		padding-left: 45px;
 	}
@@ -94,7 +94,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		h3 {
+		h2 {
 			font-size: 40px;
 		}
 		p {
@@ -107,7 +107,7 @@
 	}
 }
 @media (max-width: 868px) {
-	.containerTop h3 {
+	.containerTop h2 {
 		padding-left: 25px;
 		font-size: 32px;
 	}
@@ -134,7 +134,7 @@
 	}
 	.containerTop {
 		padding: 0;
-		h3 {
+		h2 {
 			font-size: 25px;
 		}
 	}
@@ -150,7 +150,7 @@
 	}
 }
 @media (max-width: 425px) {
-	.containerTop h3 {
+	.containerTop h2 {
 		font-size: 20px;
 		padding-bottom: 30px;
 	}

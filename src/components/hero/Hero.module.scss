@@ -7,10 +7,10 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 66px;
-	font-size: 54px;
-	font-weight: 800;
-	p {
-        letter-spacing: -.5px;
+	h1 {
+		font-weight: 800;
+		font-size: 54px;
+		letter-spacing: -0.5px;
 		span {
 			color: $skyblue;
 		}
@@ -47,7 +47,7 @@
 		font-size: 16px;
 	}
 }
-.blockTitle{
+.blockTitle {
 	line-height: 120%;
 	font-size: 20px;
 }
@@ -86,7 +86,9 @@
 	.containerTop {
 		padding: 0 25px 0 45px;
 		gap: 15px;
-		font-size: 44px;
+		h1 {
+			font-size: 44px;
+		}
 	}
 	.containerTopRight p {
 		margin-bottom: 30px;
@@ -103,27 +105,29 @@
 }
 @media (max-width: 868px) {
 	.containerTop {
-		font-size: 34px;
+		h1 {
+			font-size: 34px;
+		}
 		padding: 0 10px 0 25px;
 	}
-	.containerBottom{
+	.containerBottom {
 		grid-template-columns: none;
 		grid-template-rows: 250px 250px 250px;
 	}
 }
 @media (max-width: 645px) {
-	.containerTop {
+	.containerTop h1 {
 		font-size: 34px;
 	}
 }
 @media (max-width: 425px) {
-	.containerTop {
+	.containerTop h1 {
 		font-size: 24px;
 	}
-	.blockTitle{
+	.blockTitle {
 		font-size: 16px;
 	}
-	.block p{
+	.block p {
 		font-size: 14px;
 	}
 }

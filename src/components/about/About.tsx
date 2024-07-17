@@ -5,9 +5,9 @@ const About = () => {
 	return (
 		<section className={styles.container}>
 			<div className={styles.containerTop}>
-				<h3>
+				<h2>
 					<span>ХМС Экспо</span> в выставочной логистике
-				</h3>
+				</h2>
 				<Image className={styles.img} src={picture} alt='image' />
 				<div>
 					<p>
