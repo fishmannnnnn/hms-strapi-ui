@@ -21,7 +21,7 @@ const Hero = () => {
 				<div className={styles.block} id={styles.planeBlock}>
 					<Image
 						className={styles.blockBg}
-						src='/plane-bg.avif'
+						src='/hero/plane-bg.avif'
 						alt='image'
 						width='0'
 						height='0'
@@ -61,7 +61,7 @@ const Hero = () => {
 				<div className={styles.block} id={styles.truckBlock}>
 					<Image
 						className={styles.blockBg}
-						src='/truck-bg.avif'
+						src='/hero/truck-bg.avif'
 						alt='image'
 						width='0'
 						height='0'
@@ -93,7 +93,7 @@ const Hero = () => {
 				<div className={styles.block} id={styles.accessibilityBlock}>
 					<Image
 						className={styles.blockBg}
-						src='/accessibility-bg.avif'
+						src='/hero/accessibility-bg.avif'
 						alt='image'
 						width='0'
 						height='0'
