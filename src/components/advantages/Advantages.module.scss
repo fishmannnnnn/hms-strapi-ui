@@ -1,0 +1,276 @@
+@import '@/styles/vars';
+.container {
+	margin-top: 173px;
+	h2 {
+		letter-spacing: -0.5px;
+		font-size: 48px;
+		font-weight: 800;
+		line-height: 120%;
+		padding-bottom: 35px;
+		span {
+			color: $skyblue;
+		}
+	}
+}
+.containerTop {
+	margin-top: 35px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	p {
+		max-width: 730px;
+		font-size: 20px;
+		line-height: 150%;
+		flex-shrink: 1;
+	}
+}
+.btn {
+	max-width: 360px;
+	width: 100%;
+	flex-shrink: 0;
+}
+.containerBottom {
+	margin-top: 50px;
+	display: grid;
+	gap: 5px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 200px);
+}
+.gridItem {
+	padding: 25px;
+	border-radius: 30px;
+	position: relative;
+	min-height: 200px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.counter {
+	width: 38px;
+	height: 38px;
+	border-radius: 200px;
+	display: grid;
+	place-content: center;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+	flex-shrink: 0;
+}
+.itemBg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+}
+#item1 {
+	grid-column: 1/3;
+	grid-row: 1/3;
+}
+#item4 {
+	grid-column: 3/5;
+}
+#item6 {
+	grid-column: 2/5;
+}
+#item1,
+#item2,
+#item3,
+#item5,
+#item6 {
+	.counter {
+		align-self: flex-end;
+		background: $red;
+		color: white;
+	}
+}
+#item4,
+#item5 {
+	color: white;
+	.counter {
+		background: white;
+		color: $red;
+	}
+}
+#item6 {
+	color: white;
+}
+
+.content {
+	h3 {
+		font-size: 20px;
+		padding-bottom: 15px;
+	}
+	p {
+		max-width: 370px;
+	}
+}
+#item3,
+#item6 {
+	.content {
+		color: white;
+		position: relative;
+		z-index: 5;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		left: 0;
+		border-radius: 30px;
+		background: linear-gradient(
+			180deg,
+			rgba(28, 37, 44, 0) 20%,
+			#1c252c 100%
+		);
+	}
+}
+
+@media (max-width: 1160px) {
+	.container h2,
+	.containerTop {
+		padding: 0 45px 0 25px;
+	}
+}
+@media (max-width: 1120px) {
+	.content h3 {
+		font-size: 18px;
+		padding-bottom: 5px;
+	}
+	.container h2 {
+		font-size: 32px;
+	}
+	.containerTop p {
+		font-size: 18px;
+	}
+	.btn {
+		display: none;
+	}
+}
+@media (max-width: 940px) {
+	.content {
+		h3 {
+			font-size: 16px;
+			padding-bottom: 10px;
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+}
+@media (max-width: 868px) {
+	.container {
+		margin-top: 150px;
+	}
+	.containerTop {
+		margin-top: 25px;
+	}
+	.container h2 {
+		padding-left: 25px;
+		font-size: 26px;
+	}
+	.containerBottom {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: repeat(4, 200px);
+	}
+	#item1 {
+		grid-column: 1/3;
+		grid-row: 1/3;
+	}
+	#item3 {
+		grid-row: 2;
+	}
+	#item4 {
+		grid-column: 1/3;
+	}
+	#item6 {
+		grid-column: 1/4;
+	}
+}
+@media (max-width: 640px) {
+	.container {
+		margin-top: 100px;
+		h2 {
+			font-size: 20px;
+		}
+	}
+	.containerTop {
+		margin-top: 20px;
+        p{
+            font-size: 14px;
+        }
+	}
+	.containerBottom {
+		display: flex;
+		flex-direction: column;
+	}
+	#item1 {
+		height: 292px;
+	}
+	#item4 .counter {
+		align-self: flex-end;
+	}
+}
+@media (max-width: 425px) {
+	.container h2 {
+		font-size: 20px;
+	}
+	.containerTop {
+        margin-top: 15px;
+        p{
+
+            font-size: 14px;
+        }
+	}
+}
+// @media (max-width: 1086px) {
+// 	.containerTop {
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: start;
+// 		h3 {
+// 			font-size: 40px;
+// 		}
+// 		p {
+// 			font-size: 18px;
+// 		}
+// 	}
+// 	.img {
+// 		margin-bottom: 35px;
+// 		align-self: center;
+// 	}
+// }
+// @media (max-width: 868px) {
+// 	.container h3 {
+// 		padding-left: 25px;
+// 		font-size: 32px;
+// 	}
+// 	.containerTop p {
+// 		padding-left: 25px;
+// 	}
+// }
+// @media (max-width: 600px) {
+// 	.container {
+// 		margin-top: 100px;
+// 	}
+// 	.containerTop {
+// 		padding: 0;
+// 		h3 {
+// 			font-size: 25px;
+// 		}
+// 	}
+// }
+// @media (max-width: 425px) {
+// 	.containerTop h3 {
+// 		font-size: 20px;
+// 		padding-bottom: 30px;
+// 	}
+// 	.containerTop p {
+// 		font-size: 14px;
+// 	}
+// }
