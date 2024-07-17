@@ -1,6 +1,6 @@
 import styles from './About.module.scss';
 import Image from 'next/image';
-import picture from '/public/truck-img.png';
+import picture from '/public/about/truck-img.png';
 const About = () => {
 	return (
 		<section className={styles.container}>
