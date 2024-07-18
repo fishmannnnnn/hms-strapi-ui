@@ -147,6 +147,10 @@
 	}
 	.containerTop p {
 		font-size: 18px;
+		max-width: none;
+	}
+	.containerTop{
+		display: block;
 	}
 	.btn {
 		display: none;
@@ -170,9 +174,12 @@
 	.containerTop {
 		margin-top: 25px;
 	}
+	.container h2,
+	.containerTop {
+		padding: 0 25px 0 25px;
+	}
 	.container h2 {
-		padding-left: 25px;
-		font-size: 26px;
+		font-size: 34px;
 	}
 	.containerBottom {
 		grid-template-columns: 1fr 1fr 1fr;
@@ -196,7 +203,7 @@
 	.container {
 		margin-top: 100px;
 		h2 {
-			font-size: 20px;
+			font-size: 30px;
 		}
 	}
 	.containerTop {
@@ -214,6 +221,11 @@
 	}
 	#item4 .counter {
 		align-self: flex-end;
+	}
+}
+@media (max-width: 600px){
+	.container h2{
+		font-size: 25px;
 	}
 }
 @media (max-width: 425px) {

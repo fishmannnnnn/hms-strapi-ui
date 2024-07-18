@@ -21,6 +21,7 @@ const Hero = () => {
 				<div className={styles.block} id={styles.planeBlock}>
 					<Image
 						className={styles.blockBg}
+						id={styles.plane}
 						src='/hero/plane-bg.avif'
 						alt='image'
 						width='0'

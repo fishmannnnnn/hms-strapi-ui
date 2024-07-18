@@ -9,7 +9,7 @@
 	align-items: end;
 	gap: 0 40px;
 	h2 {
-        letter-spacing: -.5px;
+		letter-spacing: -0.5px;
 		font-size: 48px;
 		font-weight: 800;
 		line-height: 120%;
@@ -44,7 +44,7 @@
 	flex-wrap: wrap;
 	gap: 5px;
 	align-items: center;
-        justify-content: flex-start;
+	justify-content: flex-start;
 }
 .pill {
 	flex: 1 1;
@@ -54,7 +54,7 @@
 	line-height: 150%;
 	font-weight: 500;
 	display: flex;
-    justify-content: space-around;
+	justify-content: space-around;
 	white-space: nowrap;
 	cursor: pointer;
 	&:hover {
@@ -109,18 +109,18 @@
 @media (max-width: 868px) {
 	.containerTop h2 {
 		padding-left: 25px;
-		font-size: 32px;
+		font-size: 34px;
 	}
 	.containerTop p {
 		padding-left: 25px;
 	}
 	.containerBottom {
-        padding: 0 25px;
+		padding: 0 25px;
 	}
-    .pill{
-        flex: 0 0;
-    }
-    #pill1,
+	.pill {
+		flex: 0 0;
+	}
+	#pill1,
 	#pill2,
 	#pill3,
 	#pill4,
@@ -141,7 +141,7 @@
 	.img {
 		margin-bottom: 30px;
 	}
-    #pill1,
+	#pill1,
 	#pill2,
 	#pill3,
 	#pill4,
