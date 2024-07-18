@@ -1,0 +1,160 @@
+@import '@/styles/vars';
+.container {
+	margin-top: 150px;
+	display: flex;
+	justify-content: space-between;
+        gap: 50px;
+
+}
+.gridContainer {
+	max-width: 560px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5px;
+}
+.gridItem {
+	color: $black;
+	overflow: hidden;
+	padding: 25px;
+	width: 100%;
+	min-height: 198px;
+	border-radius: 30px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	p {
+		line-height: 120%;
+		font-size: 20px;
+		font-weight: 800;
+	}
+}
+#item1 {
+	background: $darkblue;
+	color: white;
+}
+#item4 {
+	color: white;
+	background: $skyblue;
+}
+.itemBg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+}
+.icon {
+	display: grid;
+	place-content: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 200px;
+}
+.iconBlue {
+	background: $skyblue;
+}
+.iconRed {
+	background: $red;
+}
+.iconWhite {
+	background: white;
+}
+.flexContainer {
+	max-width: 460px;
+	align-self: flex-end;
+	h2 {
+		letter-spacing: -0.5px;
+		font-size: 48px;
+		font-weight: 800;
+		line-height: 120%;
+		padding-bottom: 30px;
+		span {
+			color: $skyblue;
+		}
+	}
+	p {
+		font-size: 20px;
+		margin-bottom: 40px;
+	}
+}
+@media (max-width: 1160px) {
+	.container {
+		margin-top: 100px;
+		// padding-left: 45px;
+	}
+	.flexContainer {
+		// padding: 0 25px 0 45px;
+		h2 {
+			font-size: 44px;
+		}
+	}
+}
+@media (max-width: 1086px) {
+	.gridItem {
+		min-height: 170px;
+	}
+	.flexContainer {
+		display: flex;
+		flex-direction: column;
+	}
+}
+@media (max-width: 868px) {
+	.container {
+		flex-direction: column-reverse;
+	}
+	.gridItem {
+		min-height: 150px;
+	}
+	.gridContainer {
+		max-width: none;
+	}
+	.flexContainer {
+		max-width: none;
+		align-self: flex-start;
+		padding: 0 10px 0 25px;
+		h2 {
+			font-size: 34px;
+		}
+		p {
+			margin: 0;
+            font-size: 18px;
+		}
+		.btn {
+			display: none;
+		}
+	}
+}
+@media (max-width: 640px) {
+	.gridContainer {
+		grid-template-columns: 1fr;
+	}
+	.gridItem p {
+		font-size: 18px;
+	}
+}
+@media (max-width: 600px) {
+	.container {
+		margin-top: 100px;
+	}
+	.flexContainer h2 {
+		font-size: 25px;
+        padding-bottom: 15px;
+	}
+}
+@media (max-width: 425px) {
+	.flexContainer {
+		h2 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+	.gridItem p {
+		font-size: 16px;
+	}
+}
