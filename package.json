@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ark-ui/react": "^3.5.0",
+    "classnames": "^2.5.1",
     "framer-motion": "^11.3.2",
     "next": "14.2.4",
     "react": "^18",
